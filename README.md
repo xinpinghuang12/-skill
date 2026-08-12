@@ -1,59 +1,76 @@
-# xpeng-mona-marketing-skills
+# XPENG MONA Marketing Skills
 
-基于小鹏汽车（MONA）区域市场实战沉淀的 **Cursor Agent Skills**。  
-品牌固定小鹏 / MONA；节日可任意切换。
+基于小鹏汽车 MONA 区域市场实践整理的 Cursor Agent Skill，用于节日 / 节点整合营销方案与多渠道内容生产。
 
-| Skill | 目录 | 作用 |
+| Skill | 路径 | 产出 |
 |------|------|------|
-| 节日整合营销作战包 | [`xpeng-festival-campaign/`](xpeng-festival-campaign/) | 任意节点 → 完整区域作战包 |
-| 多渠道文案工厂 | [`auto-brand-copy-lab/`](auto-brand-copy-lab/) | 同一主题 → 全渠道多版本文案 |
+| 节日整合营销作战包 | [`xpeng-festival-campaign/`](xpeng-festival-campaign/) | 节点策略、传播节奏、门店执行、KPI 与复盘 |
+| 多渠道文案工厂 | [`auto-brand-copy-lab/`](auto-brand-copy-lab/) | 海报、朋友圈、小红书、口播、门店话术 |
+
+品牌范围：小鹏 / MONA。支持情人节、女神节、五一、520、中秋、国庆及开业 / 到店等节点复用。
 
 ---
 
-## 真实跑数样例（推荐先看这个）
+## 交付样例：中秋战役
 
-以下两篇是 **按 Skill SOP 完整跑出来的中秋战役**（GitHub 可直接阅读）：
+以「中秋节 × MONA」完成一次端到端演示：先出作战包，再按推荐主题输出全渠道文案。
 
-| 顺序 | 文件 | 说明 |
-|------|------|------|
-| 1 | [examples/01-mid-autumn-festival-campaign.md](examples/01-mid-autumn-festival-campaign.md) | Skill 1 完整作战包：节点解码→主题3选1→日历→物料→门店→KPI→复盘 |
-| 2 | [examples/02-mid-autumn-copy-lab.md](examples/02-mid-autumn-copy-lab.md) | Skill 2 完整文案包：承接推荐主题「月圆人聚，开往团圆」的全渠道成稿 |
+### 样例一｜区域整合营销作战包
 
-### 本次实测 Input
+**主题：** 月圆人聚，开往团圆  
 
-**Skill 1**
+| 格式 | 链接 |
+|------|------|
+| 阅读版 | [Markdown](examples/01-mid-autumn-campaign.md) |
+| 网页版 | [HTML](examples/01-mid-autumn-campaign.html) |
+| 打印版 | [PDF](examples/01-mid-autumn-campaign.pdf) |
+
+**输入**
+
 ```text
 用 xpeng-festival-campaign，
 节日：中秋节，日期 2026-09-25 前后，
 车型 MONA，区域广州/华南，
-目标：到店试驾，出完整区域作战包。
+目标：到店试驾，输出完整区域作战包。
 ```
 
-**Skill 2**
+**输出要点**
+
+- 节点解码：团圆陪伴 × 家庭到店体验  
+- 主题 3 选 1，推荐「月圆人聚，开往团圆」  
+- 预热 / 引爆 / 收尾日历  
+- 物料清单、门店动线、风险预案  
+- KPI 模板与复盘五问（无确认数据处标注待确认）
+
+### 样例二｜全渠道文案多版本包
+
+承接上案推荐主题。
+
+| 格式 | 链接 |
+|------|------|
+| 阅读版 | [Markdown](examples/02-mid-autumn-copy.md) |
+| 网页版 | [HTML](examples/02-mid-autumn-copy.html) |
+| 打印版 | [PDF](examples/02-mid-autumn-copy.pdf) |
+
+**输入**
+
 ```text
 用 auto-brand-copy-lab，
 主题「月圆人聚，开往团圆」，MONA，中秋，
-目标到店试驾，出全渠道多版本文案，价格不写死。
+目标到店试驾，输出全渠道多版本文案。
 ```
 
-### 本次实测 Output 摘要
+**输出要点**
 
-**作战包推荐主题：** 月圆人聚，开往团圆  
-**主转化：** 预约试驾 / 到店留资  
-**节奏：** 预热 9/18–9/24 → 引爆 9/25–9/27 → 收尾 9/28–10/02  
-
-**文案包 KV 推荐**
-- 主标题：月圆人聚，开往团圆  
-- 副标题：MONA 中秋到店体验，预约试驾  
-
-**朋友圈一句**  
-> 这个中秋，团圆不只在饭桌上。欢迎带家人来店里坐坐～
-
-👉 完整表格、话术、小红书正文、风险预案请点开上面两个 Markdown。
+- KV 主标题：月圆人聚，开往团圆  
+- 朋友圈 3 版（温暖 / 专业 / 年轻）  
+- 小红书 2 篇、口播 15–30s / 45–60s  
+- 门店接待 / 电话 / 私信话术  
+- 合规：智能辅助驾驶；礼遇以门店当期为准
 
 ---
 
-## 快速安装
+## 安装
 
 ```bash
 cp -R xpeng-festival-campaign ~/.cursor/skills/
@@ -62,22 +79,25 @@ cp -R auto-brand-copy-lab ~/.cursor/skills/
 
 ---
 
-## 组合用法
+## 使用方式
 
-1. 先跑 Skill 1 定主题与执行框架  
-2. 再跑 Skill 2 产出各渠道成稿  
+1. 调用 `xpeng-festival-campaign` 确定主题与执行框架  
+2. 调用 `auto-brand-copy-lab` 生成各渠道成稿  
+3. 按需导出 HTML / PDF，用于对齐设计、门店与复盘
 
 ---
 
-## 设计逻辑
+## 方法说明
 
 ```text
-输入节日/节点
- → 节点解码（情绪 × MONA × 转化 × 级别）
- → 固定交付模板
- → 质检（合规 / 不编造 KPI / 价格不写死）
- → Markdown / PDF 交付
+节点输入
+ → 解码（情绪 / 品牌关联 / 转化 / 级别）
+ → 标准交付结构
+ → 质检（合规表述、不编造业绩、价格不写死）
+ → Markdown / HTML / PDF
 ```
+
+能力侧重点：区域市场全链路交付、内容多版本生产、跨部门对齐清单、辅助驾驶宣传合规。
 
 ---
 
@@ -86,14 +106,15 @@ cp -R auto-brand-copy-lab ~/.cursor/skills/
 ```text
 ├── README.md
 ├── examples/
-│   ├── 01-mid-autumn-festival-campaign.md   ← 真实作战包
-│   └── 02-mid-autumn-copy-lab.md            ← 真实文案包
+│   ├── 01-mid-autumn-campaign.md / .html / .pdf
+│   └── 02-mid-autumn-copy.md / .html / .pdf
 ├── xpeng-festival-campaign/
 └── auto-brand-copy-lab/
 ```
 
 ---
 
-## Author
+## 作者
 
-黄馨平 · 基于小鹏汽车市场部（MONA）区域市场实习经验整理
+黄馨平  
+实践背景：小鹏汽车市场部（MONA）区域市场实习
